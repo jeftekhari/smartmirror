@@ -137,7 +137,7 @@ class Weather(Frame):
 
             if latitude is None and longitude is None:
                 # get location
-                location_req_url = "http://freegeoip.net/json/%s" % self.get_ip()
+                location_req_url = "http://api.ipstack.com/%s?access_key=58a9317886e890abb3d718d88818c686" % self.get_ip()
                 r = requests.get(location_req_url)
                 location_obj = json.loads(r.text)
 
